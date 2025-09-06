@@ -1,4 +1,4 @@
-![DeepFusion Banner](https://github.com/your-username/deepfusion-product-intelligence/assets/banner.png)
+![DeepFusion Banner](https://user-images.githubusercontent.com/your-username/deepfusion-product-intelligence/assets/banner.png)
 
 # DeepFusion: Multi-Modal Product Intelligence  
 
@@ -32,9 +32,6 @@ The goal of this project is to **automate and improve product categorization at 
 
 4. **Bridge technical results with real-world impact**  
    - Translate even small accuracy gains into practical benefits: reduced manual rework, faster product onboarding, more consistent search and recommendation results, and stronger fraud detection.  
-
-5. **Lay the foundation for scalable intelligence**  
-   - Provide a system that works offline today but can evolve into a real-time, production-ready pipeline in the future.  
 
 ---
 
