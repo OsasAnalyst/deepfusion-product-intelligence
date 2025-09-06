@@ -91,3 +91,35 @@ Before training, we carried out an exploratory data analysis (EDA) to understand
 
 ![Seasons Distribution](https://github.com/user-attachments/assets/1aa808f1-aa3e-477e-94ca-00cbb14f869d)
 *Season Distribution*
+
+
+## Feature Engineering & Preprocessing  
+To prepare the dataset for modeling, we built a preprocessing pipeline that cleaned and transformed the raw inputs into machine-readable features.  
+
+**Steps included:**  
+- **Handling missing values**: Filled gaps in numeric fields (like `year`) with median values and replaced missing categorical entries (e.g., `baseColour`, `season`, `usage`) with `"Unknown"`.  
+- **Text cleaning**: Standardized the `productDisplayName` by removing special characters, trimming spaces, and converting to lowercase.  
+- **Derived features**: Created a new feature, `name_length`, capturing the number of words in each product name.  
+- **Encoding categorical variables**: Applied one-hot encoding to fields like gender, category, subcategory, and season.  
+- **Scaling numeric variables**: Standardized numeric features (`year`, `name_length`) to ensure balanced contributions during training.  
+- **Target encoding**: Converted the target variable (`articleType`) into numeric labels for classification.  
+
+This pipeline was fitted on the training set and then consistently applied to validation and test sets, ensuring no data leakage and a fair comparison across models.  
+
+
+## Modeling  
+Before fusing images with metadata, we first tested each input type on its own. Training separate models on **metadata-only** features and **image-only** data gave us baseline results and helped reveal the unique strengths of each modality.  
+
+To study model behavior, we tried three different setups for both metadata and image pipelines:  
+1. **Small baseline model** – A simple network to confirm the pipeline runs correctly end-to-end.  
+2. **Overfit model** – A deliberately large network with minimal regularization, used as a diagnostic check to ensure the model can at least memorize the training data.  
+3. **Regularized model** – A well-balanced design that includes techniques like dropout, batch normalization, and L2 regularization to improve generalization.  
+
+### Metadata Model  
+The regularized metadata model used features like gender, category, color, season, and year. Regularization helped it avoid overfitting and learn useful signals from structured data. Beyond accuracy, we evaluated it with **precision, recall, and F1-score** to confirm performance across both frequent and rare product categories.  
+
+### Image Model  
+For images, we built a regularized model on top of a **pre-trained EfficientNetB0 backbone**. By freezing the base model and adding data augmentation plus dropout, the system learned strong visual features without overfitting. This setup provided a powerful image-only baseline.  
+
+### Fusion Model  
+Finally, we combined metadata and image inputs into a single **fusion model**. This multi-modal design leveraged both structured attributes and product photos, capturing richer context than either input type alone. The result was our best-performing setup, offering higher accuracy and better consistency across categories.  
