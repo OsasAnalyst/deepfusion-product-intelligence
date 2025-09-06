@@ -166,3 +166,17 @@ DeepFusion demonstrates that combining product images with structured metadata l
 Though the improvement may seem incremental, at catalog scale the impact is substantial — **better search results, smarter recommendations, fewer catalog errors, and lower manual workload for merchandising teams**.  
 
 In short, DeepFusion shows how multi-modal learning can turn a traditionally manual, error-prone process into an **automated, scalable, and business-friendly solution** for e-commerce product intelligence.  
+
+
+---
+
+## 🏁 Closing Remark  
+
+This project reflects my passion for applying data and machine learning to solve real business challenges in e-commerce.  
+
+I am open to full-time opportunities where I can contribute to business strategy through analytics and AI, as well as freelance collaborations with organizations looking to leverage data for smarter decision-making.  
+
+---
+
+📌 Author: [Osaretin Idiagbonmwen](https://www.linkedin.com/in/osaretin-idiagbonmwen-33ab85339)  
+📩 Email: oidiagbonmwen@gmail.com  
