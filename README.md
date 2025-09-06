@@ -35,3 +35,57 @@ The goal of this project is to **automate and improve product categorization at 
 
 ---
 
+
+## Data Collection  
+To train and evaluate **DeepFusion: Multi-Modal Product Intelligence**, we need a dataset that combines both visual data (product images) and structured metadata. For this project, we used the **E-ComRec Dataset** from Kaggle.  
+
+This dataset is well-suited because it provides:  
+- **Product images** – the visual representation customers actually see.  
+- **Metadata** – structured attributes like category, gender, color, season, and year.  
+
+Together, these two modalities reflect real-world e-commerce catalogs, where classification and recommendations depend on both how a product looks and what it’s described as.  
+
+---
+
+## Exploratory Data Analysis (EDA)  
+Before training, we carried out an exploratory data analysis (EDA) to understand the dataset’s structure, detect quality issues, and uncover insights that shape preprocessing.  
+
+### Key Steps in EDA  
+1. **Dataset overview**  
+   - Checked dataset size, column types, missing values, and duplicates.  
+   - Ensured all product entries had both metadata and image links.  
+
+2. **Data quality checks**  
+   - Reviewed numeric ranges, unique values, and string formatting issues (e.g., trailing spaces, inconsistent casing).  
+
+3. **Target distribution**  
+   - Analyzed how `articleType` (the target category) was distributed.  
+   - Found some classes heavily represented while others were underrepresented — a signal to handle class imbalance.  
+
+4. **Metadata distributions**  
+   - Explored categorical features like `gender`, `masterCategory`, `subCategory`, `baseColour`, `season`, and `year`.  
+   - Identified patterns such as dominant product colors or seasonal spikes.  
+
+5. **Relationships**  
+   - Compared `articleType` against features like `gender` to uncover correlations (e.g., some categories were gender-specific).  
+
+6. **Image validation**  
+   - Verified image URLs were valid and accessible.  
+   - Checked for missing or broken links.  
+
+7. **Sample inspection**  
+   - Displayed a small set of product images alongside their metadata to confirm alignment.  
+
+---
+
+### Sample Visualizations  
+
+![Top 15 Subcategory](https://github.com/user-attachments/assets/6e406a28-19d0-4134-8d31-be622bfc466b)  
+*Distribution of Subcategores 
+
+![Sample Images](https://github.com/user-attachments/assets/1c93af5a-3ba4-40e9-9298-529b9eaec67a)  
+*Example products with their metadata attributes.*  
+
+![Article Distrinbution](https://github.com/user-attachments/assets/46629992-1d88-43d5-a38d-df584de0e464)
+
+![Seasons Distribution](https://github.com/user-attachments/assets/1aa808f1-aa3e-477e-94ca-00cbb14f869d)
