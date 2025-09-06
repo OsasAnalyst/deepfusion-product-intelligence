@@ -147,8 +147,7 @@ While the project shows promising results, there are some limitations to note:
 
 ## Future Work  
 This project establishes a strong baseline, but there are several opportunities to extend it:  
-- **Richer multi-modal fusion**: Experiment with advanced architectures (e.g., attention-based fusion, transformers) to better align image and metadata features.  
-- **Handling imbalance**: Apply techniques such as focal loss, data augmentation, or category re-weighting to improve performance on rare classes.  
+- **Richer multi-modal fusion**: Experiment with advanced architectures (e.g., attention-based fusion, transformers) to better align image and metadata features.
 - **Beyond classification**: Extend the system to tasks like attribute extraction, duplicate detection, or fraud detection.  
 - **Real-time deployment**: Optimize the pipeline for production use, enabling real-time classification of new products as they’re uploaded.  
 - **Additional data sources**: Incorporate text descriptions, customer reviews, or seller info to capture more context.  
