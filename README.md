@@ -123,3 +123,45 @@ For images, we built a regularized model on top of a **pre-trained EfficientNetB
 
 ### Fusion Model  
 Finally, we combined metadata and image inputs into a single **fusion model**. This multi-modal design leveraged both structured attributes and product photos, capturing richer context than either input type alone. The result was our best-performing setup, offering higher accuracy and better consistency across categories.  
+
+---
+
+## Recommendations  
+Based on the results, we recommend adopting the **fusion model** as the primary approach for product categorization. Even though the performance lift over image-only models looks small in percentage terms, at scale this translates into **thousands of additional products being classified correctly**. For an e-commerce platform, this brings:  
+- More consistent product tagging with less manual intervention.  
+- Better search and recommendation outcomes for customers.  
+- Reduced catalog errors, which lowers operational costs and improves trust in the platform.  
+
+To maximize impact, the model should be deployed in a pipeline where newly onboarded products are automatically classified and flagged for review only if confidence is low. This way, teams can focus their attention where it matters most instead of reviewing every item.  
+
+---
+
+## Limitations  
+While the project shows promising results, there are some limitations to note:  
+- **Dataset coverage**: The E-ComRec dataset is clean and structured, but real-world catalogs may include noisy or incomplete metadata, as well as lower-quality images.  
+- **Class imbalance**: Some product categories are underrepresented, which may bias the model toward more frequent classes.  
+- **Scalability**: Training and inference on high-resolution images at scale require significant compute resources.  
+- **Contextual gaps**: Metadata and images don’t capture everything — product reviews, descriptions, and seller information could add further context.  
+
+---
+
+## Future Work  
+This project establishes a strong baseline, but there are several opportunities to extend it:  
+- **Richer multi-modal fusion**: Experiment with advanced architectures (e.g., attention-based fusion, transformers) to better align image and metadata features.  
+- **Handling imbalance**: Apply techniques such as focal loss, data augmentation, or category re-weighting to improve performance on rare classes.  
+- **Beyond classification**: Extend the system to tasks like attribute extraction, duplicate detection, or fraud detection.  
+- **Real-time deployment**: Optimize the pipeline for production use, enabling real-time classification of new products as they’re uploaded.  
+- **Additional data sources**: Incorporate text descriptions, customer reviews, or seller info to capture more context.  
+
+---
+
+## Conclusion  
+DeepFusion demonstrates that combining product images with structured metadata leads to **more accurate and reliable product categorization** than using either source alone.  
+
+- **Metadata-only model**: ~81% accuracy  
+- **Image-only model**: ~85.7% accuracy  
+- **Fusion model**: ~86.4% accuracy  
+
+Though the improvement may seem incremental, at catalog scale the impact is substantial — **better search results, smarter recommendations, fewer catalog errors, and lower manual workload for merchandising teams**.  
+
+In short, DeepFusion shows how multi-modal learning can turn a traditionally manual, error-prone process into an **automated, scalable, and business-friendly solution** for e-commerce product intelligence.  
