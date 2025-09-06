@@ -1,4 +1,5 @@
-![DeepFusion Banner](https://user-images.githubusercontent.com/your-username/deepfusion-product-intelligence/assets/banner.png)
+![DeepFusion Banner](https://github.com/user-attachments/assets/bcb364ac-cccf-485e-be57-1d2ed95927ca)
+*Multimodel product categorization*
 
 # DeepFusion: Multi-Modal Product Intelligence  
 
