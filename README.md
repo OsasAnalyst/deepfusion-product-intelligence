@@ -81,11 +81,13 @@ Before training, we carried out an exploratory data analysis (EDA) to understand
 ### Sample Visualizations  
 
 ![Top 15 Subcategory](https://github.com/user-attachments/assets/6e406a28-19d0-4134-8d31-be622bfc466b)  
-*Distribution of Subcategores 
+*Distribution of Subcategores* 
 
 ![Sample Images](https://github.com/user-attachments/assets/1c93af5a-3ba4-40e9-9298-529b9eaec67a)  
 *Example products with their metadata attributes.*  
 
 ![Article Distrinbution](https://github.com/user-attachments/assets/46629992-1d88-43d5-a38d-df584de0e464)
+*Article Distribution by Gender*
 
 ![Seasons Distribution](https://github.com/user-attachments/assets/1aa808f1-aa3e-477e-94ca-00cbb14f869d)
+*Season Distribution*
